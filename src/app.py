@@ -15,6 +15,9 @@ CORS(app)
 
 # Create the jackson family object
 jackson_family = FamilyStructure("Jackson")
+for dictionary in member_dictionaries:
+    jackson_family.add_member(dictionary)
+
 
 
 # Handle/serialize errors like a JSON object
