@@ -48,8 +48,8 @@ class FamilyStructure:
                 id=self._generate_id()
             )
         # append the member to the members list
-        # self._members.append(member)    
-        pass
+        self._members.append(member)    
+        
 
     def delete_member(self, id):
         ## You have to implement this method
