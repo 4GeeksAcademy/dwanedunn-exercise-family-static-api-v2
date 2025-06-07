@@ -48,17 +48,27 @@ class FamilyStructure:
                 id=self._generate_id()
             )
         # append the member to the members list
-        self._members.append(member)    
+        self._members.append(member)
+        return member    
         
 
     def delete_member(self, id):
         ## You have to implement this method
         ## Loop the list and delete the member with the given id
+        self._members = list(filter(lambda member:member['id'] != id, self._members))
         pass
 
     def get_member(self, id):
         ## You have to implement this method
         ## Loop all the members and return the one with the given id
+        # for member in self._members:
+        #     if member["id"] == id:
+        #         return member
+        # return None
+        member = list(filter(lambda member:member['id'] == id, self._members))
+        if len(member )> 0:
+            return member[0]
+        return None
         pass
 
     # This method is done, it returns a list with all the family members
